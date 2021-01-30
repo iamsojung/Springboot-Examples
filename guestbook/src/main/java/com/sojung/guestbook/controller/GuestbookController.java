@@ -53,6 +53,7 @@ public class GuestbookController {
 
         redirectAttributes.addFlashAttribute("msg", gno);
 
+
         return "redirect:/guestbook/list";
     }
 
@@ -64,6 +65,8 @@ public class GuestbookController {
         log.info("gno: " + gno);
 
         GuestbookDTO dto = service.read(gno);
+
+
 
         model.addAttribute("dto", dto);
 
@@ -104,8 +107,4 @@ public class GuestbookController {
         return "redirect:/guestbook/read";
 
     }
-
-
-
-
 }
